@@ -1,19 +1,15 @@
 import './App.css';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { Terminal } from 'lucide-react';
+import {Navbar} from '@/components/navigation/navigation.tsx';
+import {ThemeProvider} from '@/provider/theme.tsx';
 
 function App() {
-
-  return (<main>
-    <Alert variant={ 'destructive' }>
-      <Terminal className="h-4 w-4"/>
-      <AlertTitle>Heads up!</AlertTitle>
-      <AlertDescription>
-        You can add components and dependencies to your app using the cli.
-      </AlertDescription>
-    </Alert>
-
-  </main>);
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <main className={'w-4/5 mx-auto'}>
+        <Navbar/>
+      </main>
+    </ThemeProvider>
+  );
 }
 
 export default App;
