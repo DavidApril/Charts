@@ -1,16 +1,12 @@
 export * from './badges/social-network.tsx';
-
 export * from './cards/owner.tsx';
 export * from './cards/profile-spotify.tsx';
-
 export * from './carousel/repositories.tsx';
 export * from './carousel/top-songs.tsx';
-
 export * from './charts/area.tsx';
 export * from './charts/pie.tsx';
-
 export * from './navigation/navigation.tsx';
-
+export * from './skeletons/avatar.tsx';
 export * from './ui/alert.tsx';
 export * from './ui/avatar.tsx';
 export * from './ui/badge.tsx';
