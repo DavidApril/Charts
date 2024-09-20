@@ -35,10 +35,10 @@ export const ProfileSpotifyCard = () => {
     <Card>
       <CardHeader>
         {userProfile ? <div className={'flex gap-5'}>
-          <Avatar className={'h-20 w-20'}>
-            <AvatarImage src={userProfile.images[0].url}/>
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
+          {/*<Avatar className={'h-20 w-20'}>*/}
+          {/*  <AvatarImage src={userProfile.images[0].url}/>*/}
+          {/*  <AvatarFallback>CN</AvatarFallback>*/}
+          {/*</Avatar>*/}
           <div className={'flex flex-col gap-3 justify-center'}>
             <CardTitle>{userProfile?.display_name}</CardTitle>
             <CardDescription className={'flex gap-1'}>
