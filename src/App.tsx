@@ -1,4 +1,4 @@
-import {Navbar, OwnerCard, ChartArea, ProfileSpotifyCard} from '@/components';
+import {Navbar, OwnerCard, ChartArea, ProfileSpotifyCard, RepositoriesCarousel} from '@/components';
 import {ThemeProvider} from '@/provider';
 
 import './App.css';
@@ -14,6 +14,7 @@ function App() {
           </div>
           <ProfileSpotifyCard/>
         </div>
+        <RepositoriesCarousel/>
         <ChartArea/>
       </main>
     </ThemeProvider>
