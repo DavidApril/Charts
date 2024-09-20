@@ -2,8 +2,21 @@ import {OwnerCard, ChartArea, ProfileSpotifyCard, RepositoriesCarousel} from '@/
 import {ThemeProvider} from '@/provider';
 
 import './App.css';
+import {SpotifyService} from '@/services';
+import {useEffect} from 'react';
 
 function App() {
+
+  useEffect(() => {
+    SpotifyService.login()
+      .then(r => {
+        console.log({r});
+        localStorage.setItem('spotify_access_token', r.access_token);
+      })
+      .catch(e => console.error({e}));
+  }, [SpotifyService]);
+
+
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <main className={'w-4/5 mx-auto flex flex-col gap-3 my-3'}>
