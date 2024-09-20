@@ -1,8 +1,9 @@
 import {spotifyApi} from '@/api/spotify.ts';
-import {SpotifyTokens, SpotifyUserInfo} from '@/interfaces';
+import {SpotifyTokens, SpotifyUserInfo, SpotifyTrack} from '@/interfaces';
 import axios from 'axios';
 
 export class SpotifyService {
+
   /**
    * Logs in to the Spotify API using client credentials and retrieves the access tokens.
    * @returns {Promise<SpotifyTokens>} A promise that resolves to the Spotify access tokens.
@@ -27,6 +28,16 @@ export class SpotifyService {
    */
   static readonly getProfileByUser = async (username: string): Promise<SpotifyUserInfo> => {
     const response: { data: SpotifyUserInfo } = await spotifyApi.get(`/users/${username}`);
+    return response.data;
+  };
+
+  /**
+   * Retrieves the Spotify track information for a given track ID.
+   * @param {string} trackId - The Spotify track ID.
+   * @returns {Promise<SpotifyTrack>} A promise that resolves to the Spotify track information.
+   */
+  static readonly getTrack = async (trackId: string): Promise<SpotifyTrack> => {
+    const response: { data: SpotifyTrack } = await spotifyApi.get(`/tracks/${trackId}`);
     return response.data;
   };
 }
