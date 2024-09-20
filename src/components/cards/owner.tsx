@@ -6,7 +6,8 @@ import {
   CardDescription,
   CardHeader,
   CardTitle,
-  AvatarFallback
+  AvatarFallback,
+  ChartPie
 } from '@/components';
 
 export const OwnerCard = () => {
@@ -24,8 +25,10 @@ export const OwnerCard = () => {
           </div>
         </div>
       </CardHeader>
-      <CardContent>
-        <p>Card Content</p>
+      <CardContent className={'flex'}>
+        <ChartPie/>
+        <ChartPie/>
+        <ChartPie/>
       </CardContent>
     </Card>
   );
