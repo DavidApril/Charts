@@ -8,6 +8,7 @@ export * from './charts/pie.tsx';
 export * from './navigation/navigation.tsx';
 export * from './skeletons/avatar.tsx';
 export * from './skeletons/card.tsx';
+export * from './stats/github.tsx';
 export * from './ui/alert.tsx';
 export * from './ui/avatar.tsx';
 export * from './ui/badge.tsx';

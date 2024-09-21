@@ -1,1 +1,2 @@
-export * from './spotify.tsx';
+export * from 'src/interfaces/github.ts';
+export * from 'src/interfaces/spotify.ts';
