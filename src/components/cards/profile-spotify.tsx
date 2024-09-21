@@ -1,12 +1,9 @@
 import {
-  Avatar,
-  AvatarImage,
   Card,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
-  AvatarFallback,
   TopSongsCarousel,
   SocialNetworkBadgeWithTooltip,
   AvatarSkeleton,
@@ -29,17 +26,11 @@ export const ProfileSpotifyCard = () => {
     getProfileInformation();
   }, []);
 
-  console.log({userProfile});
-
   return (
     <Card>
       <CardHeader>
         {userProfile ? <div className={'flex gap-5'}>
-          {/*<Avatar className={'h-20 w-20'}>*/}
-          {/*  <AvatarImage src={userProfile.images[0].url}/>*/}
-          {/*  <AvatarFallback>CN</AvatarFallback>*/}
-          {/*</Avatar>*/}
-          <div className={'flex flex-col gap-3 justify-center'}>
+          <div className={'flex flex-col gap-3'}>
             <CardTitle>{userProfile?.display_name}</CardTitle>
             <CardDescription className={'flex gap-1'}>
               <SocialNetworkBadgeWithTooltip
@@ -52,7 +43,7 @@ export const ProfileSpotifyCard = () => {
           </div>
         </div> : <AvatarSkeleton/>}
       </CardHeader>
-      <CardContent className={'flex place-content-center'}>
+      <CardContent>
         <TopSongsCarousel/>
       </CardContent>
     </Card>
