@@ -8,6 +8,7 @@
       "path": "./tsconfig.node.json"
     }
   ],
+  "moduleResolution": "node16", "module": "node16",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {

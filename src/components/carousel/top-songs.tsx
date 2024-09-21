@@ -20,16 +20,10 @@ export const TopSongsCarousel = () => {
   const [track, setTrack] = useState<SpotifyTrack>();
 
   useEffect(() => {
-    if (!api) {
-      return;
-    }
-
+    if (!api) return;
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on('select', () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
+    api.on('select', () => setCurrent(api.selectedScrollSnap() + 1));
   }, [api]);
 
   useEffect(() => {
@@ -37,8 +31,6 @@ export const TopSongsCarousel = () => {
       .then(r => setTrack(r))
       .catch(e => console.error({e}));
   }, [SpotifyService]);
-
-  console.log({track});
 
   return (
     <div className="mx-auto max-w-xs">
